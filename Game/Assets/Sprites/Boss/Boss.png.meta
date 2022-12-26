@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-guid: c06ff1dacd8e8a04f9df9c3e954d2e3f
+guid: be20ca6d29662fc4d8d11cccef88fd19
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 2444156689053964738
-    second: idle_front_0
-  - first:
-      213: -7437019228305108301
-    second: idle_front_1
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -69,7 +63,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -88,19 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,7 +94,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle_front_0
+      name: Boss_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 36
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c9d47a1f836be120800000000000000
-      internalID: 2444156689053964738
+      spriteID: fe7b9116a1ab5bc4eae15d51d8dd03fa
+      internalID: -1395068222
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_front_1
+      name: Boss_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 36
         y: 0
-        width: 16
-        height: 16
+        width: 36
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b2df153a666ac890800000000000000
-      internalID: -7437019228305108301
+      spriteID: ce74120480a1cb64bbd643ccd4a2243f
+      internalID: -1931287394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_front_2
+      name: Boss_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 72
         y: 0
-        width: 16
-        height: 16
+        width: 36
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 718e78ac8affb1d4199e5b54f5ad0612
-      internalID: -891643167
+      spriteID: 8f0dcce22f381fe498b512f49fbeeeb9
+      internalID: -1968846954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_front_3
+      name: Boss_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 108
         y: 0
-        width: 16
-        height: 16
+        width: 36
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77c414154f934b0478d4796fb451620c
-      internalID: -637475153
+      spriteID: 15ce3111d01dc4948abe6572cced69aa
+      internalID: 505430612
       vertices: []
       indices: 
       edges: []
@@ -217,10 +211,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      idle_front_3: -637475153
-      idle_front_2: -891643167
-      idle_front_1: -7437019228305108301
-      idle_front_0: 2444156689053964738
+      Boss_0: -1395068222
+      Boss_2: -1968846954
+      Boss_1: -1931287394
+      Boss_3: 505430612
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
