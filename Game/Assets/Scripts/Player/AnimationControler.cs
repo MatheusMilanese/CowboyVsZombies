@@ -7,7 +7,11 @@ public class AnimationControler : MonoBehaviour
     
     [SerializeField] private Animator _animator;
     private PlayerMove _playerMove;
-    private bool isBack;
+    private bool _isBack;
+
+    public bool isBack {
+        get { return _isBack; }
+    }
 
     void Start()
     {
@@ -23,19 +27,19 @@ public class AnimationControler : MonoBehaviour
 
     void OnInput(){
         if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
-            isBack = true;
+            _isBack = true;
         }
         if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
-            isBack = false;
+            _isBack = false;
         }
     }
 
     void UpdateAnimation(){
         if(_playerMove.isMoving){
-            _animator.SetInteger("tipo", (isBack ? 2 : 3));
+            _animator.SetInteger("tipo", (_isBack ? 2 : 3));
         }
         else{
-            _animator.SetInteger("tipo", (isBack ? 1 : 0));
+            _animator.SetInteger("tipo", (_isBack ? 1 : 0));
         }
     }
 }
