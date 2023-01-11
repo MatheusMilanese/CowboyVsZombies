@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerController: MonoBehaviour
 {
     private Rigidbody2D player;
     private bool _isMoving;
@@ -31,6 +30,16 @@ public class PlayerMove : MonoBehaviour
     {
         OnMove();
     }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Bullet"){
+            // morreu por bala
+        }
+        else if(other.gameObject.tag == "Enemy"){
+            // morreu por zumbi
+        }
+    }
+
     private void OnMove(){
 
         if(_posX != 0 || _posY != 0) _isMoving = true;

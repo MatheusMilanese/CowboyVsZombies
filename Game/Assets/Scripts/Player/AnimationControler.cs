@@ -6,7 +6,7 @@ public class AnimationControler : MonoBehaviour
 {
     
     [SerializeField] private Animator _animator;
-    private PlayerMove _playerMove;
+    private PlayerController _playerMove;
     private bool _isBack;
 
     public bool isBack {
@@ -15,7 +15,7 @@ public class AnimationControler : MonoBehaviour
 
     void Start()
     {
-        _playerMove = GetComponent<PlayerMove>();
+        _playerMove = GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
