@@ -7,6 +7,8 @@ public class AnimationControler : MonoBehaviour
     
     [SerializeField] private Animator _animator;
     private PlayerController _playerMove;
+
+    private Rigidbody2D playRb;
     private bool _isBack;
 
     public bool isBack {
@@ -16,22 +18,25 @@ public class AnimationControler : MonoBehaviour
     void Start()
     {
         _playerMove = GetComponent<PlayerController>();
+        playRb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         OnInput();
-        UpdateAnimation();
+        
     }
 
     void OnInput(){
-        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)){
+        if(Input.GetKey(KeyCode.UpArrow)){
             _isBack = true;
         }
-        if(Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)){
+        else if( (Input.GetKey(KeyCode.DownArrow) || ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))))){
             _isBack = false;
-        }
+        } 
+        
+        UpdateAnimation();
     }
 
     void UpdateAnimation(){
