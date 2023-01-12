@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController: MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerController: MonoBehaviour
 
     [SerializeField] private float speed = 5;
     [SerializeField] private GameObject _bloodPrefab;
+
+    [SerializeField] private string cena_morte;
 
     private float _posX;
     private float _posY;
@@ -32,13 +35,17 @@ public class PlayerController: MonoBehaviour
         OnMove();
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
+    private  void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Bullet" || other.gameObject.tag == "Enemy"){
+            SceneManager.LoadScene(cena_morte);
             Destroy(this.gameObject);
             Instantiate(_bloodPrefab, transform.position, Quaternion.identity);
+            
         }
         
     }
+
+  
 
     private void OnMove(){
 
