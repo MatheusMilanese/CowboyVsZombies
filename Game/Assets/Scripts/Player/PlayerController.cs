@@ -8,6 +8,7 @@ public class PlayerController: MonoBehaviour
     private bool _isMoving;
 
     [SerializeField] private float speed = 5;
+    [SerializeField] private GameObject _bloodPrefab;
 
     private float _posX;
     private float _posY;
@@ -32,12 +33,11 @@ public class PlayerController: MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Bullet"){
-            // morreu por bala
+        if(other.gameObject.tag == "Bullet" || other.gameObject.tag == "Enemy"){
+            Destroy(this.gameObject);
+            Instantiate(_bloodPrefab, transform.position, Quaternion.identity);
         }
-        else if(other.gameObject.tag == "Enemy"){
-            // morreu por zumbi
-        }
+        
     }
 
     private void OnMove(){
