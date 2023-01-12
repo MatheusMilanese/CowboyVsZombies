@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
    
-     [SerializeField] private string nomeCena = "Cena1";
+     [SerializeField] private string nomeCena = "Gameplay";
 
      [SerializeField] private GameObject painelMenuInicial;
      [SerializeField] private GameObject painelMenuOpcoes;
