@@ -16983,6 +16983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   _bloodPrefab: {fileID: 2186588307117234905, guid: fdc6c72a7a85dff4f9f41f2dda910ab6, type: 3}
+  cena_morte: MenuMorte
 --- !u!70 &6461384718767365865
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
