@@ -10,8 +10,13 @@ public class MenuMorte : MonoBehaviour
     [SerializeField] private string cena_menu;
 
     [SerializeField] private GameObject prefab;
+
+    private bool _start_state = true;
     public void JogarNovamente(){
-        StartCoroutine(Loading());
+        if(_start_state){
+            _start_state = false;
+            StartCoroutine(Loading());
+        }
     }
     
 
@@ -43,6 +48,7 @@ public class MenuMorte : MonoBehaviour
         asyncLoad.allowSceneActivation = false;
         //espera a animação terminar
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length/2);
+        _start_state = true;
         //ativa a cena
         asyncLoad.allowSceneActivation = true;
     }

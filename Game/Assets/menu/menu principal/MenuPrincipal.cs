@@ -14,9 +14,14 @@ public class MenuPrincipal : MonoBehaviour
      [SerializeField] private GameObject painelMenuOpcoes;
 
      [SerializeField] private GameObject prefab;
+
+     private bool _start_state = true;
      private GameObject loading;
     public void Jogar(){
-        StartCoroutine(Loading());
+        if(_start_state){
+            _start_state = false;
+            StartCoroutine(Loading());
+        }
     }
 
      IEnumerator Loading(){
@@ -37,8 +42,13 @@ public class MenuPrincipal : MonoBehaviour
         asyncLoad.allowSceneActivation = false;
         //espera a animação terminar
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length/2);
+
+        _start_state = true;
+
         //ativa a cena
         asyncLoad.allowSceneActivation = true;
+
+
     }
 
     public void AbrirMenuOpcoes(){
