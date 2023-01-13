@@ -432,6 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cena_jogo: Gameplay
   cena_menu: MenuPrincipal
+  prefab: {fileID: 2631970813493773407, guid: 3116e2ff1cd3b6f47a4e7a93e0bbc364, type: 3}
 --- !u!4 &1059594734
 Transform:
   m_ObjectHideFlags: 0
