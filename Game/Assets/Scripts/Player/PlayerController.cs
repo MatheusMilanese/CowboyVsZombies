@@ -40,9 +40,6 @@ public class PlayerController: MonoBehaviour
     }
 
     private  void OnCollisionEnter2D(Collision2D other) {
-        if(other.gameObject.tag == "Bullet"){
-            Debug.Log("Bug encontrado");
-        }
         if(other.gameObject.tag == "Bullet" || other.gameObject.tag == "Enemy"){
             lodingManager.IsLoding = true;
             Destroy(this.gameObject);
