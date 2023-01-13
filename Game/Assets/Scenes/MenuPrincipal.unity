@@ -223,7 +223,7 @@ MonoBehaviour:
   nomeCena: Gameplay
   painelMenuInicial: {fileID: 346973774}
   painelMenuOpcoes: {fileID: 1205725114}
-  prefab: {fileID: 6002189953288848808, guid: 83fd5ec929616444783fd0b50dc35ba4, type: 3}
+  prefab: {fileID: 2631970813493773407, guid: 3116e2ff1cd3b6f47a4e7a93e0bbc364, type: 3}
 --- !u!4 &129472843
 Transform:
   m_ObjectHideFlags: 0

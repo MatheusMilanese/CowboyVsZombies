@@ -31,17 +31,21 @@ public class LodingManager : MonoBehaviour
 
     IEnumerator Loading(){
         isLoding = false;
-        if(GameObject.Find("Loading") == null){
-            loading =  Instantiate(prefab);
-            loading.name = "Loading";
-        }
+        Destroy(GameObject.Find("Loading"));
+        
+        loading =  Instantiate(prefab);
+        loading.name = "Loading";
+        
+        //nao destruir o prefab
+        DontDestroyOnLoad(loading);
         //recuperar o animator do filhdo do filho
         Animator anim = loading.transform.GetChild(0).GetChild(0).GetComponent<Animator>();
+       
         //cena so carrega quando a animação terminar
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(cena_morte, LoadSceneMode.Single);
         asyncLoad.allowSceneActivation = false;
         //espera a animação terminar
-        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length/2);
         //ativa a cena
         asyncLoad.allowSceneActivation = true;
     }

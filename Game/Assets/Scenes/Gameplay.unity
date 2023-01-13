@@ -2871,7 +2871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLoding: 0
   cena_morte: MenuMorte
-  prefab: {fileID: 6002189953288848808, guid: 83fd5ec929616444783fd0b50dc35ba4, type: 3}
+  prefab: {fileID: 2631970813493773407, guid: 3116e2ff1cd3b6f47a4e7a93e0bbc364, type: 3}
 --- !u!4 &570537586
 Transform:
   m_ObjectHideFlags: 0
