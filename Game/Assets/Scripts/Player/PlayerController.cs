@@ -11,7 +11,10 @@ public class PlayerController: MonoBehaviour
     [SerializeField] private float speed = 5;
     [SerializeField] private GameObject _bloodPrefab;
 
-    [SerializeField] private string cena_morte;
+    
+
+    [SerializeField] private GameObject scanane_manager;
+    LodingManager lodingManager;
 
     private float _posX;
     private float _posY;
@@ -22,7 +25,8 @@ public class PlayerController: MonoBehaviour
     }
     
     private void Start() {
-        player = GetComponent<Rigidbody2D>();      
+        player = GetComponent<Rigidbody2D>();   
+        lodingManager = scanane_manager.GetComponent<LodingManager>();
     }
 
     private void Update(){
@@ -37,10 +41,9 @@ public class PlayerController: MonoBehaviour
 
     private  void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Bullet" || other.gameObject.tag == "Enemy"){
-            SceneManager.LoadScene(cena_morte);
+            lodingManager.IsLoding = true;
             Destroy(this.gameObject);
             Instantiate(_bloodPrefab, transform.position, Quaternion.identity);
-            
         }
         
     }
