@@ -26,10 +26,10 @@ public class GunController : MonoBehaviour
         OnRotate();
         OnShot();
         if(_animController.isBack){
-            _spriteRenderer.sortingOrder = 4;
+            _spriteRenderer.sortingOrder = 9;
         }
         else {
-            _spriteRenderer.sortingOrder = 6;
+            _spriteRenderer.sortingOrder = 11;
         }
     }
 
