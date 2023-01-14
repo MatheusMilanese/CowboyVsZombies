@@ -21,8 +21,25 @@ public class BossController : MonoBehaviour
 
     void Update() {
         if(_target != null){
-            transform.position = Vector3.MoveTowards(transform.position, _target.position, speed * Time.deltaTime);
+            //transform.position = Vector3.MoveTowards(transform.position, _target.position, speed * Time.deltaTime);
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(_target.position.x - transform.position.x, _target.position.y - transform.position.y).normalized * speed;
         }
+         rotacaoBoss();
+
+         //rodar o boss 360 graus e depois voltar para a posição inicial
+         
+    }
+
+    void rotacaoBoss(){
+        //ratacionar boss no eixo y
+        if(gameObject.GetComponent<Rigidbody2D>().velocity.x > 0){
+            transform.eulerAngles = new Vector2(0, 0);
+        }else if(gameObject.GetComponent<Rigidbody2D>().velocity.x < 0){
+            transform.eulerAngles = new Vector2(0, 180);
+        }
+
+
+            
     }
 
     private void OnCollisionEnter2D(Collision2D other) {

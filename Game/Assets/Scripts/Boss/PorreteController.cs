@@ -9,10 +9,13 @@ public class PorreteController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        StartCoroutine(Atacar());
     }
 
-   
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     IEnumerator Atacar(){
         //espera a animação terminar
