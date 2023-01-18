@@ -10,6 +10,8 @@ public class GunController : MonoBehaviour
     [SerializeField] private Transform[] _bulletPoints;
     [SerializeField] private float shotForce;
     [SerializeField] private bulletController _bulletPrefab;
+
+    private AudioClip _shotSound;
     private float _forceX, _forceY;
     private int _posPoint;
     float rotation = 0.0f;
@@ -19,6 +21,8 @@ public class GunController : MonoBehaviour
         _posPoint = 0;
         _forceX = shotForce;
         _forceY = 0;
+        
+
     }
 
     void Update()
@@ -37,6 +41,7 @@ public class GunController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
             bulletController newBullet = Instantiate(_bulletPrefab, _bulletPoints[_posPoint].position, Quaternion.identity);
             newBullet.AddStartingForce(_forceX, _forceY);
+            GetComponent<AudioSource>().Play();
         }
     }
 
