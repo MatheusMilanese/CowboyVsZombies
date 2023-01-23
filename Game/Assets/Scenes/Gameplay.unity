@@ -16035,6 +16035,7 @@ MonoBehaviour:
   - {fileID: 2019924834}
   - {fileID: 1659200150}
   - {fileID: 546281107}
+  smokerBoss: {fileID: 6921780010569373209, guid: 454e7cfaedaabf34d977d25e149ff43d, type: 3}
   spawnPositionsBoss:
   - {fileID: 449028002}
   - {fileID: 388801848}
@@ -16586,7 +16587,7 @@ AudioSource:
   m_GameObject: {fileID: 1919171132}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5f7ba6648779051418cd905dd0d486ed, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9fc8c4bb9aeff504ca7773d9ebe23c3c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.187
@@ -17287,7 +17288,7 @@ AudioSource:
   m_GameObject: {fileID: 5786722629973185370}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5f7ba6648779051418cd905dd0d486ed, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8b929aea1c940384cb7585200f977842, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.195

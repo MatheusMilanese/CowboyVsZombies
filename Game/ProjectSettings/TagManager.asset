@@ -7,6 +7,7 @@ TagManager:
   - Obstacle
   - Bullet
   - Enemy
+  - BossLifeBar
   layers:
   - Default
   - TransparentFX

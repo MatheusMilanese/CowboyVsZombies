@@ -18,6 +18,7 @@ public class BracoDireitoController : MonoBehaviour
     {
         _animation = GetComponent<Animator>();
         gameObject.SetActive(false);
+
         
     }
 
@@ -29,6 +30,8 @@ public class BracoDireitoController : MonoBehaviour
         }
         //gameObject.GetComponent<Rigidbody2D>().rotation += 20;
     }
+
+    
 
     IEnumerator _Atacar(){
         gameObject.SetActive(true);

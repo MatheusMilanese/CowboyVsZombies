@@ -100,7 +100,7 @@ Animator:
   m_GameObject: {fileID: 6713321878760444601}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b64bcd2ee74e732489c378eb71ad2540, type: 2}
+  m_Controller: {fileID: 9100000, guid: 29a5e6ddfef379e4ba1195e3614518e0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,14 +122,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
+  m_Mass: 100000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!70 &6713321878760444551
 CapsuleCollider2D:
@@ -160,7 +160,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
-  _BloodPrefab: {fileID: 0}
+  speedBuff: 0
+  _BloodPrefab: {fileID: 2186588307117234905, guid: 88ae0647da9bb544487e074d2bce87c9, type: 3}
+  _lifeBarPrefab: {fileID: 5470601413329942210, guid: 67c33a623680daa418388250e85daf2e, type: 3}
 --- !u!1 &6713321879977985445
 GameObject:
   m_ObjectHideFlags: 0
